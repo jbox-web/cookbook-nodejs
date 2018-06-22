@@ -19,5 +19,6 @@ apt_repository 'stretch-nodejs-binary' do
   components   ['main']
 end
 
+# Install packages
 package 'nodejs'
 package 'yarn'
