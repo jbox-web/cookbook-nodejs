@@ -1,0 +1,10 @@
+name: nodejs
+title: NodeJS Profile
+maintainer: Nicolas Rodriguez
+copyright: Nicolas Rodriguez
+copyright_email: nicoladmin@free.fr
+license: MIT
+summary: NodeJS Compliance Profile
+version: 1.0.0
+supports:
+- os-family: linux
