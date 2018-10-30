@@ -14,7 +14,7 @@ end
 
 # Install Yarn repository
 apt_repository 'stretch-nodejs-binary' do
-  uri          'https://deb.nodesource.com/node_10.x'
+  uri          "https://deb.nodesource.com/node_#{node[:nodejs][:version]}"
   key          'https://deb.nodesource.com/gpgkey/nodesource.gpg.key'
   components   ['main']
 end
