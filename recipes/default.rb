@@ -5,7 +5,7 @@ package 'dirmngr'
 package 'apt-transport-https'
 
 # Install NodeJS repository
-apt_repository 'stretch-yarn-binary' do
+apt_repository 'yarn-binary' do
   uri          'https://dl.yarnpkg.com/debian'
   key          'https://dl.yarnpkg.com/debian/pubkey.gpg'
   components   ['main']
@@ -13,7 +13,7 @@ apt_repository 'stretch-yarn-binary' do
 end
 
 # Install Yarn repository
-apt_repository 'stretch-nodejs-binary' do
+apt_repository 'nodejs-binary' do
   uri          "https://deb.nodesource.com/node_#{node[:nodejs][:version]}"
   key          'https://deb.nodesource.com/gpgkey/nodesource.gpg.key'
   components   ['main']
