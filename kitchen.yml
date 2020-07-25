@@ -28,4 +28,4 @@ suites:
       - recipe[nodejs]
     attributes:
       nodejs:
-        version: '11.x'
+        version: '14.x'
