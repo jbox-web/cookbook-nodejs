@@ -1,0 +1,7 @@
+DEPENDENCIES
+  nodejs
+    path: .
+    metadata: true
+
+GRAPH
+  nodejs (1.0.0)
