@@ -29,3 +29,8 @@ end
 describe package('yarn') do
   it { should be_installed }
 end
+
+describe file('/etc/apt/sources.list.d/yarn-binary.list') do
+  it { should exist }
+  its('content') { should include 'deb      https://dl.yarnpkg.com/debian stable main'  }
+end
