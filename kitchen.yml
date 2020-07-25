@@ -14,7 +14,13 @@ verifier:
 
 platforms:
   - name: debian-stretch
+    driver_config:
+      image: debian:stretch-slim
+      platform: debian
   - name: debian-buster
+    driver_config:
+      image: debian:buster-slim
+      platform: debian
 
 suites:
   - name: default
