@@ -2,6 +2,12 @@
 driver:
   name: docker
   use_sudo: false
+  privileged: true
+  run_command: /lib/systemd/systemd
+  provision_command:
+    - apt-get update -qq
+    - apt-get upgrade -y
+    - apt-get install -y net-tools dmidecode
 
 provisioner:
   name: chef_solo
