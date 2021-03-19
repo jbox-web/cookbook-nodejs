@@ -1,7 +1,7 @@
 DEPENDENCIES
-  nodejs
+  jbox-nodejs
     path: .
     metadata: true
 
 GRAPH
-  nodejs (1.0.0)
+  jbox-nodejs (1.0.0)
