@@ -2,27 +2,19 @@
 
 title 'Test NodeJS installation'
 
-DISTROS = {
-  '9'  => 'stretch',
-  '10' => 'buster',
-}
-
-distro = DISTROS[os[:release].to_s.split('.').first]
+# Fetch Inspec inputs
+debian_release = input('debian_release')
+nodejs_version = input('nodejs_version')
 
 # Test NodeJS package
 describe package('nodejs') do
   it { should be_installed }
+  its('version') { should eq nodejs_version }
 end
 
 describe file('/etc/apt/sources.list.d/nodejs-binary.list') do
   it { should exist }
-
-  case distro
-  when 'stretch'
-    its('content') { should include 'deb      https://deb.nodesource.com/node_14.x stretch main'  }
-  when 'buster'
-    its('content') { should include 'deb      https://deb.nodesource.com/node_14.x buster main'  }
-  end
+  its('content') { should include "deb      https://deb.nodesource.com/node_14.x #{debian_release} main"  }
 end
 
 # Test Yarn package
