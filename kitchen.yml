@@ -19,6 +19,15 @@ verifier:
     - progress
 
 platforms:
+  - name: debian-bullseye
+    driver_config:
+      image: debian:bullseye-slim
+      platform: debian
+    verifier:
+      inputs:
+        debian_release: bullseye
+        nodejs_version: 14.17.5-deb-1nodesource1
+
   - name: debian-buster
     driver_config:
       image: debian:buster-slim
