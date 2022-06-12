@@ -26,7 +26,7 @@ platforms:
     verifier:
       inputs:
         debian_release: bullseye
-        nodejs_version: 14.19.0-deb-1nodesource1
+        nodejs_version: 14.19.3-deb-1nodesource1
 
   - name: debian-buster
     driver_config:
@@ -35,7 +35,7 @@ platforms:
     verifier:
       inputs:
         debian_release: buster
-        nodejs_version: 14.19.0-deb-1nodesource1
+        nodejs_version: 14.19.3-deb-1nodesource1
 
 suites:
   - name: default
